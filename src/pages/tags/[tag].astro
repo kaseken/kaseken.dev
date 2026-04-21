@@ -1,0 +1,102 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { SITE_TITLE } from '../../consts';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog', ({ data }) => !data.draft);
+
+	const tagSet = new Set(posts.flatMap((post) => post.data.tags));
+
+	return [...tagSet].map((tag) => ({
+		params: { tag },
+		props: {
+			posts: posts
+				.filter((post) => post.data.tags.includes(tag))
+				.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+		},
+	}));
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<BaseHead
+			title={`#${tag} | ${SITE_TITLE}`}
+			description={`「${tag}」タグの記事一覧`}
+		/>
+		<style>
+			main {
+				width: 720px;
+			}
+			h1 {
+				margin-bottom: 0.5rem;
+			}
+			.count {
+				color: rgb(var(--gray));
+				margin-bottom: 2rem;
+				font-size: 0.9rem;
+			}
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+			}
+			ul li a {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+				gap: 1rem;
+				text-decoration: none;
+				color: rgb(var(--black));
+				padding: 0.5rem 0;
+				border-bottom: 1px solid rgb(var(--gray-light));
+				transition: 0.2s ease;
+			}
+			ul li a:hover .title {
+				color: rgb(var(--accent));
+			}
+			.title {
+				font-size: 1.1rem;
+				font-weight: 600;
+			}
+			.date {
+				font-size: 0.85rem;
+				color: rgb(var(--gray));
+				white-space: nowrap;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>#{tag}</h1>
+			<p class="count">{posts.length}件の記事</p>
+			<ul>
+				{
+					posts.map((post) => (
+						<li>
+							<a href={`/blog/${post.id}/`}>
+								<span class="title">{post.data.title}</span>
+								<span class="date">
+									<FormattedDate date={post.data.pubDate} />
+								</span>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>
