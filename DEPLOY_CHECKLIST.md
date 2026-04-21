@@ -9,18 +9,17 @@
 
 ## GitHub
 
-- [ ] 変更を commit して `main` にプッシュする
+- [ ] リポジトリを作成して `main` に push する
+- [ ] Settings → Pages → Source を **GitHub Actions** に変更する
+- [ ] Actions が成功することを確認する
 
 ---
 
-## Cloudflare
+## カスタムドメイン
 
-- [ ] ビルド設定を確認:
-  - **Build command**: `pnpm build`
-  - **Deploy command**: `npx wrangler deploy`
-- [ ] 環境変数: `NODE_VERSION` = `22`
-- [ ] デプロイ成功を確認
-- [ ] カスタムドメイン `blog.kaseken.dev` の設定
+- [ ] Settings → Pages → Custom domain に `blog.kaseken.dev` を設定する
+- [x] DNS に CNAME レコードを追加する（`blog.kaseken.dev` → `kaseken.github.io`）✓ 設定済み
+- [ ] `public/CNAME` ファイルに `blog.kaseken.dev` を記載する
 
 ---
 
