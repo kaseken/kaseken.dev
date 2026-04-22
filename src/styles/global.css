@@ -80,6 +80,20 @@ p {
 .prose p {
 	margin-bottom: 2em;
 }
+.prose li p {
+	margin-bottom: 0;
+}
+[data-footnotes] ol {
+	padding-left: 1.2em;
+	margin: 0;
+}
+[data-footnotes] li {
+	margin-bottom: 0.25em;
+	font-size: 0.85em;
+}
+[data-footnotes] li p {
+	margin: 0;
+}
 textarea {
 	width: 100%;
 	font-size: 16px;
@@ -111,7 +125,7 @@ blockquote {
 	border-left: 4px solid var(--accent);
 	padding: 0 0 0 20px;
 	margin: 0;
-	font-size: 1.333em;
+	font-size: 1em;
 }
 hr {
 	border: none;
