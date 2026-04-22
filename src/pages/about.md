@@ -4,7 +4,8 @@ title: About
 description: kaseken — Software Engineer based in Tokyo
 ---
 
-Hi, I'm kaseken (Kent Kaseda) — a software engineer based in Tokyo.
+Hi, I'm kaseken (Kent Kaseda) — a Software Engineer based in Tokyo.  
+This blog explores core computer science concepts through the lens of mobile technology.
 
 ## Experience
 
