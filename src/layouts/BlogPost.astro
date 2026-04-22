@@ -9,7 +9,7 @@ import Header from '../components/Header.astro';
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
-const slug = Astro.url.pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
+const slug = Astro.url.pathname.replace(/^\//, '').replace(/\/$/, '');
 ---
 
 <html lang="en">

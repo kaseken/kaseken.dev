@@ -9,7 +9,7 @@ export async function getStaticPaths() {
 	return posts.map((post) => ({ params: { slug: post.id } }));
 }
 
-export async function GET({ params }: { params: { slug: string } }) {
+export async function GET({ params }: { params: { slug: string | undefined } }) {
 	const posts = await getCollection('blog');
 	const post = posts.find((p) => p.id === params.slug);
 	if (!post) return new Response('Not found', { status: 404 });
