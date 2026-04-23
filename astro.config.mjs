@@ -7,7 +7,7 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://blog.kaseken.dev',
+	site: 'https://kaseken.dev',
 	integrations: [
 		mdx(),
 		sitemap(),

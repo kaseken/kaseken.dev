@@ -140,7 +140,7 @@ export async function GET({ params }: { params: { slug: string | undefined } }) 
 												type: 'div',
 												props: {
 													style: { color: '#5a6380', fontSize: '24px' },
-													children: 'kaseken · blog.kaseken.dev',
+													children: 'kaseken · kaseken.dev',
 												},
 											},
 										],

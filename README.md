@@ -1,1 +1,1 @@
-# blog.kaseken.dev
+# kaseken.dev
