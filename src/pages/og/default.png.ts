@@ -139,7 +139,7 @@ export async function GET() {
 												type: 'div',
 												props: {
 													style: { color: '#5a6380', fontSize: '24px' },
-													children: 'kaseken · blog.kaseken.dev',
+													children: 'kaseken · kaseken.dev',
 												},
 											},
 										],
