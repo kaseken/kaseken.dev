@@ -8,6 +8,11 @@ import { defineConfig, fontProviders } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://kaseken.dev',
+	redirects: {
+		'/dripnote/ja/support': 'https://dripnote.kaseken.dev/dripnote/ja/support',
+		'/dripnote/ja/feedback': 'https://dripnote.kaseken.dev/dripnote/ja/feedback',
+		'/dripnote/ja/privacy': 'https://dripnote.kaseken.dev/dripnote/ja/privacy',
+	},
 	integrations: [
 		mdx(),
 		sitemap(),
