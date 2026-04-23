@@ -288,7 +288,7 @@ In this article, we revealed the internal implementation of the three core funct
 
 That said, there is much more to Flow. The following topics will each be covered in separate future articles:
 
-- **How Intermediate Flow Operators like `map` work internally**
+- **[How Intermediate Flow Operators like `map` work internally](/kotlin/coroutine-flow-internals-intermediate-operator/)**
 - **How Hot Flow works internally**
 - **How context switching with `flowOn` works**
 - **How Buffering and Conflation work**
