@@ -9,9 +9,9 @@ import { defineConfig, fontProviders } from 'astro/config';
 export default defineConfig({
 	site: 'https://kaseken.dev',
 	redirects: {
-		'/dripnote/ja/support': 'https://dripnote.kaseken.dev/dripnote/ja/support',
-		'/dripnote/ja/feedback': 'https://dripnote.kaseken.dev/dripnote/ja/feedback',
-		'/dripnote/ja/privacy': 'https://dripnote.kaseken.dev/dripnote/ja/privacy',
+		'/dripnote/ja/support': 'https://kaseken.github.io/dripnote/ja/support',
+		'/dripnote/ja/feedback': 'https://kaseken.github.io/dripnote/ja/feedback',
+		'/dripnote/ja/privacy': 'https://kaseken.github.io/dripnote/ja/privacy',
 	},
 	integrations: [
 		mdx(),
