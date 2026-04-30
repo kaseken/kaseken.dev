@@ -107,7 +107,10 @@ input {
 	font-size: 16px;
 }
 table {
+	display: block;
 	width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
 }
 img {
 	max-width: 100%;
