@@ -1,7 +1,6 @@
 ---
 name: zenn-to-en
 description: Translate a Zenn article (Japanese) to English and convert it to an Astro blog post. Use when the user wants to port a Zenn article to this blog.
-disable-model-invocation: true
 ---
 
 Arguments: `<file-path> <zenn-url>`
