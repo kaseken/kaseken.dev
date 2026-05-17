@@ -24,7 +24,7 @@ Arguments: `<file-path> <zenn-url>`
 ---
 title: ""
 description: ""
-pubDate: YYYY-MM-DD
+pubDate: <today's date in YYYY-MM-DD format, not the Zenn article's publish date>
 tags: []  # populated from Zenn API
 ---
 ```
